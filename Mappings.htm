@@ -1,0 +1,239 @@
+ 
+
+
+
+
+	
+	
+
+		
+		
+		
+
+		
+		
+			
+		
+
+		
+		
+
+		
+
+		
+
+
+
+
+<!-- /////////////////////////////////////////////////////// -->
+<!-- ///  open header.cfm -->
+<html>
+<head>
+	<title>ColdFusion Administrator</title>
+	<link rel="STYLESHEET" type="text/css" href="../cfadmin.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta name="Author" content="Copyright 1996-2003 Macromedia Corp. All rights reserved.">
+</head>
+
+<body bgcolor="C8D3DC" topmargin="0" text="444444" link="003399" vlink="997799" alink="339900" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="White">
+<tr bgcolor="eeeeee">
+	<td height="35" nowrap background="../images/headerstub.jpg">&nbsp; &nbsp; &nbsp;</td>
+	<td colspan="2" background="../images/headerbg2000.jpg">
+		<b class="h3">ColdFusion Mappings</b>
+	</td>
+	<td width="1" nowrap rowspan="99" bgcolor="003366"><img src="../images/clear.gif" height="1" width="1"></td>
+</tr>
+<tr bgcolor="666666">
+	<td width="7%" height="1"><p style="line-height:1px;"><img src="../images/clear.gif" height="1" width="1" border="0" hspace="2"></p></td>
+	<td width="86%"><p style="line-height:1px;"><img src="../images/clear.gif" height="1" width="1" border="0" hspace="252"></p></td>
+	<td width="7%"><p style="line-height:1px;"><img src="../images/clear.gif" height="1" width="1" border="0" hspace="2"></p></td>
+	
+</tr>
+
+<!-- ///  close header.cfm -->
+<!-- /////////////////////////////////////////////////////// -->
+
+<form name="editForm" action="/CFIDE/Administrator/server_settings/mappings.cfm" method="post">
+<tr><td height="10" colspan="3">&nbsp;</td></tr>
+<tr>
+	<td>&nbsp;</td>
+	<td>
+<!-- margin top -->
+	<p>
+	ColdFusion enables you to create logical aliases for physical directories on your server.
+<ul>
+<li>For Logical Path, enter the path relative to the root URL, such as /images.</li>
+<li>For Directory Path, browse to the corresponding absolute path, such as C:/images.</li>
+<li>To edit or delete a logical path, select it from the list below.</li>
+</ul>
+	</p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><p><b>Logical Path</b></p></td>
+	<td>&nbsp; <input type="text" name="name" size="20" value="" class="text"></td>
+</tr>
+<tr>
+	<td nowrap><p><b>Directory Path</b></p></td>
+	<td nowrap>&nbsp; <input type="text" name="DirectoryPath" value="" size="35" class="text"></td>
+	<td nowrap>&nbsp; 
+		<input type="submit" name="submit" value="Browse Server" class="buttnText">
+	</td>
+</tr>
+<tr><td height="10"></td></tr>
+<tr>
+	<td colspan="2">
+	
+		<input type="submit" name="submit" value="Add Mapping" class="buttnText">
+		
+	
+	</td>
+</tr>
+</table>			
+<br>
+
+
+<table border="1" cellpadding="0" cellspacing="0" width="100%">
+<tr bgcolor="dddddd">
+	<td nowrap colspan="3"><p>&nbsp; <b>Active ColdFusion Mappings &nbsp; </b></p></td>
+</tr>
+<tr bgcolor="dddddd">
+	<td nowrap><p>&nbsp; Logical Path &nbsp; &nbsp; </p></td>
+	<td width="100%"><p>&nbsp; Directory Path</p></td>
+</tr>
+
+<tr>
+	<td nowrap height="20">
+		&nbsp; <a href="/CFIDE/Administrator/server_settings/mappings.cfm?mapname=%2F"
+		><span class="text">/</span></a> &nbsp;
+	</td>
+	<td nowrap>
+		&nbsp; <a href="/CFIDE/Administrator/server_settings/mappings.cfm?mapname=%2F"
+		><span class="text">E:\INETPUB\WWWROOT\</span></a> &nbsp;
+	</td>
+</tr>
+
+<tr>
+	<td nowrap height="20">
+		&nbsp; <a href="/CFIDE/Administrator/server_settings/mappings.cfm?mapname=%2FBuyingService%2F"
+		><span class="text">/BuyingService/</span></a> &nbsp;
+	</td>
+	<td nowrap>
+		&nbsp; <a href="/CFIDE/Administrator/server_settings/mappings.cfm?mapname=%2FBuyingService%2F"
+		><span class="text">E:\Inetpub\wwwroot\DC\BuyingService\</span></a> &nbsp;
+	</td>
+</tr>
+
+<tr>
+	<td nowrap height="20">
+		&nbsp; <a href="/CFIDE/Administrator/server_settings/mappings.cfm?mapname=%2FCarPhotos%2F"
+		><span class="text">/CarPhotos/</span></a> &nbsp;
+	</td>
+	<td nowrap>
+		&nbsp; <a href="/CFIDE/Administrator/server_settings/mappings.cfm?mapname=%2FCarPhotos%2F"
+		><span class="text">E:\Inetpub\wwwroot\DC\CarPhotos\</span></a> &nbsp;
+	</td>
+</tr>
+
+<tr>
+	<td nowrap height="20">
+		&nbsp; <a href="/CFIDE/Administrator/server_settings/mappings.cfm?mapname=%2FCarSelect%2F"
+		><span class="text">/CarSelect/</span></a> &nbsp;
+	</td>
+	<td nowrap>
+		&nbsp; <a href="/CFIDE/Administrator/server_settings/mappings.cfm?mapname=%2FCarSelect%2F"
+		><span class="text">E:\Inetpub\wwwroot\DC\CarSelect\</span></a> &nbsp;
+	</td>
+</tr>
+
+<tr>
+	<td nowrap height="20">
+		&nbsp; <a href="/CFIDE/Administrator/server_settings/mappings.cfm?mapname=%2FCommonImages%2F"
+		><span class="text">/CommonImages/</span></a> &nbsp;
+	</td>
+	<td nowrap>
+		&nbsp; <a href="/CFIDE/Administrator/server_settings/mappings.cfm?mapname=%2FCommonImages%2F"
+		><span class="text">E:\Inetpub\wwwroot\DC\CommonImages\</span></a> &nbsp;
+	</td>
+</tr>
+
+<tr>
+	<td nowrap height="20">
+		&nbsp; <a href="/CFIDE/Administrator/server_settings/mappings.cfm?mapname=%2FNewCars%2F"
+		><span class="text">/NewCars/</span></a> &nbsp;
+	</td>
+	<td nowrap>
+		&nbsp; <a href="/CFIDE/Administrator/server_settings/mappings.cfm?mapname=%2FNewCars%2F"
+		><span class="text">E:\Inetpub\wwwroot\DC\NewCars\</span></a> &nbsp;
+	</td>
+</tr>
+
+<tr>
+	<td nowrap height="20">
+		&nbsp; <a href="/CFIDE/Administrator/server_settings/mappings.cfm?mapname=%2FOnline%5FBuying%5FSimple%2F"
+		><span class="text">/Online_Buying_Simple/</span></a> &nbsp;
+	</td>
+	<td nowrap>
+		&nbsp; <a href="/CFIDE/Administrator/server_settings/mappings.cfm?mapname=%2FOnline%5FBuying%5FSimple%2F"
+		><span class="text">E:\Inetpub\wwwroot\DC\Online_Buying_Simple\</span></a> &nbsp;
+	</td>
+</tr>
+
+<tr>
+	<td nowrap height="20">
+		&nbsp; <a href="/CFIDE/Administrator/server_settings/mappings.cfm?mapname=%2FSignUps%2F"
+		><span class="text">/SignUps/</span></a> &nbsp;
+	</td>
+	<td nowrap>
+		&nbsp; <a href="/CFIDE/Administrator/server_settings/mappings.cfm?mapname=%2FSignUps%2F"
+		><span class="text">E:\Inetpub\wwwroot\DC\Signups\</span></a> &nbsp;
+	</td>
+</tr>
+
+<tr>
+	<td nowrap height="20">
+		&nbsp; <a href="/CFIDE/Administrator/server_settings/mappings.cfm?mapname=%2FTQM%2F"
+		><span class="text">/TQM/</span></a> &nbsp;
+	</td>
+	<td nowrap>
+		&nbsp; <a href="/CFIDE/Administrator/server_settings/mappings.cfm?mapname=%2FTQM%2F"
+		><span class="text">E:\Inetpub\wwwroot\DC\TQM\</span></a> &nbsp;
+	</td>
+</tr>
+
+<tr>
+	<td nowrap height="20">
+		&nbsp; <a href="/CFIDE/Administrator/server_settings/mappings.cfm?mapname=%2FUsedCars%2F"
+		><span class="text">/UsedCars/</span></a> &nbsp;
+	</td>
+	<td nowrap>
+		&nbsp; <a href="/CFIDE/Administrator/server_settings/mappings.cfm?mapname=%2FUsedCars%2F"
+		><span class="text">E:\Inetpub\wwwroot\DC\UsedCars\</span></a> &nbsp;
+	</td>
+</tr>
+
+</table>
+<br>
+<br>
+
+<!-- margin bottom -->
+	<br>
+	</td>
+	<td>&nbsp;</td>
+</tr>
+</form>
+
+
+<!-- /////////////////////////////////////////////////////// -->
+<!-- ///  open footer.cfm -->
+
+<tr><td height="1" colspan="3" bgcolor="999999"><p style="line-height:1px;"><img src="../images/clear.gif" height="1" width="1"></p></td></tr>
+<tr>
+	<td height="50" colspan="3" background="../images/footerbg2000.gif">&nbsp;</td>
+</tr>
+<tr><td height="1" colspan="3" bgcolor="999999"><p style="line-height:1px;"><img src="../images/clear.gif" height="1" width="1"></p></td></tr>
+</table>
+</body>
+</html>
+
