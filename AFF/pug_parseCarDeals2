@@ -1,0 +1,104 @@
+<cfinclude template = "pug_conn.cfm">
+
+<cfparam name="documentPath" default=''>
+<cfparam name="UploadedFileName" default=''>
+
+<cfset filePath="#documentPath#\#UploadedFileName#.txt">
+
+<cffile action="read" FILE=#filePath# variable="cardata">
+<!--<cfoutput> #cardata#</cfoutput>-->
+<cfparam name="dbyear" default=''>
+<cfparam name="make" default=''>
+<cfparam name="model" default=''>
+<cfparam name="LimitsDescription" default=''>
+<cfparam name="Description1" default=''>
+<cfparam name="EffectiveDate" default=''>
+
+<cfscript>
+
+<cfset findstr =Chr(13)>
+<cfset aa  = ListToArray(cardata, findstr)>
+
+strlen = ArrayLen(aa) ;
+strlen = 1;
+for (i=1;i LTE strlen;i=i+ 1)
+{
+	WriteOutput(aa[i]);
+	WriteOutput("<br>");
+	findPipe ="|";
+	arrpipe  = ListToArray(aa[i], findPipe);
+	Description1=arrpipe[2];
+	EffectiveDate = arrpipe[3];
+	bigstr = trim(arrpipe[1]);
+
+	yearindex = find("'",bigstr );
+	if (yearindex neq 0)
+	{
+		firstpart = left(bigstr, yearindex-1);
+		dbyear = mid(bigstr , yearindex+1, 2) ;
+		//WriteOutput(firstpart  & "somi<br>");
+		rightpick=0;
+		yearindexTwo = yearindex + 2 ; 
+	
+		rightpick = len(bigstr) - (yearindex+2);
+		//WriteOutput(rightpick & ' -- ' & len(bigstr) &  ' -- ' & yearindex & ' -- ' & yearindexTwo);
+		//WriteOutput("<br>");
+		if ( rightpick neq 0 )
+		{
+			bb = right(bigstr , rightpick);
+			WriteOutput(bb);
+			WriteOutput("<br>");
+			if( bb neq '')
+			{
+				LimitsDescription= bb;
+			}
+		}
+		makeindex = find(' ', firstpart);
+		if(makeindex neq 0)
+		{
+			make = mid(firstpart, 1,makeindex);
+			model = right(firstpart, (len(firstpart) - makeindex)) ;
+		}
+
+	}
+
+	WriteOutput("year = " & dbyear);
+	WriteOutput("<br>");
+
+	WriteOutput(make);
+	WriteOutput("<br>");
+
+	WriteOutput(model);
+	WriteOutput("<br>");
+
+	WriteOutput(LimitsDescription);
+	WriteOutput("<br>");
+
+	WriteOutput(Description1);
+	WriteOutput("<br>");
+
+	WriteOutput(EffectiveDate);
+	WriteOutput("<br>");
+
+	WriteOutput("<br>");
+
+</cfscript>
+
+<CFQUERY  NAME = "insertdata" 
+	datasource="#Application.MainDB#"  
+	username="#Application.DBUser#" 
+	password="#Application.DBPwd#">
+	insert into Pug_Newrebates (Year, Make, Model, LimitsDescription, Description1, EffectiveDate)
+		values ( dbyear, make, model, LimitsDescription, Description1, EffectiveDate)
+</cfquery>
+
+
+<cfscript>
+}
+</cfscript>
+<!--<cfoutput>#ArrayLen(aa)#</cfoutput>
+<br>
+<cfoutput>#aa[1]#</cfoutput>
+<br>
+<cfoutput>#aa[2]#</cfoutput>
+-->

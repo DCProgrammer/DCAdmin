@@ -1,0 +1,104 @@
+BODY {scrollbar-arrow-color:#FF22FF; 
+	  scrollbar-face-color:#FF99FF; 
+	  scrollbar-shadow-color: #; 
+  	  scrollbar-highlight-color: #; 
+  	  scrollbar-3dlight-color: #; 
+	  scrollbar-darkshadow-color: #; 
+	  scrollbar-track-color: #;
+      }
+A {
+	TEXT-DECORATION: underline
+}
+A:link {
+	COLOR: #CC00CC;
+	text-decoration: none;
+
+}
+A:visited {
+	COLOR: #FF99FF; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #FF66FF; TEXT-DECORATION: none
+}
+A.bottom {
+	TEXT-DECORATION: none
+}
+A.bottom:link {
+	COLOR: #5a6657
+}
+A.bottom:visited {
+	COLOR: #5a6657
+}
+A.bottom:hover {
+	COLOR: #ffffff
+}
+A.menue {
+	FONT-WEIGHT: bolder;
+	FONT-SIZE: 10pt;
+	TEXT-DECORATION: none;
+	color: #CCCCCC;
+}
+A.menue:link {
+	COLOR: #CCCCCC;
+	font-weight: bolder;
+}
+A.menue:visited {
+	COLOR: #999999;
+	font-weight: bolder;
+}
+A.menue:hover {
+	COLOR: #666666;
+	font-weight: bolder;
+}
+A.nav {
+	TEXT-DECORATION: none
+}
+A.nav:link {
+	COLOR: #c4cfc2
+}
+A.nav:visited {
+	COLOR: #c4cfc2
+}
+A.nav:hover {
+	COLOR: #ffffff
+}
+H1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #8b8b8b; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; LETTER-SPACING: 2px
+}
+H2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #8b8b8b; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; LETTER-SPACING: 1px
+}
+TD {
+	FONT-SIZE: 8pt; COLOR: #5a6657; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.prev {
+	FONT-SIZE: 8pt; COLOR: #909a8f; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.inter {
+	FONT-SIZE: 10pt; COLOR: #000000; LINE-HEIGHT: 15pt; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.td2 {
+	FONT-SIZE: 8pt; COLOR: #c4cfc2; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.td3 {
+	FONT-SIZE: 7pt; COLOR: #c4cfc2; LINE-HEIGHT: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.stop {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #000000; TEXT-DECORATION: none
+}
+.form {
+	PADDING-LEFT: 3px; FONT-SIZE: 9pt; COLOR: #5a6657; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #bdc2bc
+}
+.join {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #000000; LINE-HEIGHT: 13pt; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.warning {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:xx-small;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+	color: #FF00FF;
+	text-decoration: none;
+	background-position: center top;
+};

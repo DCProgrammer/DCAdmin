@@ -1,0 +1,10 @@
+select B.FirstName, B.LastName, B.State, B.Org, C.Name, D.Name as DealerName,
+       E.Product
+from certificat A, Members B, Organiza C, DCDealers D, Product E
+where
+A.Member=B.MemberID
+and B.State='CA'
+and A.ADD_Date > '08/31/2002'
+and A.Organizati=C.Organizati
+and A.Dealer=D.DealerID
+and A.Product=E.ProductID
